@@ -6,20 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Hanger Unblocked</title>
     <script>
-        window["GD_OPTIONS"] = {
+                window["GD_OPTIONS"] = {
             "gameId": "c0c2bfd5f4664da8b5d6dd4b37e954c5",
-            "onEvent": function (event) {
+            "onEvent": function(event) {
                 switch (event.name) {
                     case "SDK_GAME_START":
                         // advertisement done, resume game logic and unmute audio
-                        if (GLOBAL_GAME) {
+                        if(GLOBAL_GAME)
+                        {
                             GLOBAL_GAME.paused = false;
                         }
                         break;
                     case "SDK_GAME_PAUSE":
-                        if (GLOBAL_GAME) {
+                         if(GLOBAL_GAME)
+                         {
                             GLOBAL_GAME.paused = true;
-                        }
+                         }
                         // pause game logic / mute audio
                         break;
                     case "SDK_GDPR_TRACKING":
@@ -31,7 +33,7 @@
                 }
             },
         };
-        (function (d, s, id) {
+        (function(d, s, id) {
             var js, fjs = d.getElementsByTagName(s)[0];
             if (d.getElementById(id)) return;
             js = d.createElement(s);
@@ -48,6 +50,10 @@
             font-weight: normal !important;
             text-shadow: 0 0 0 !important;
             margin: 0px;
+            user-select: none;
+      			-moz-user-select: none;
+      			-webkit-user-select: none;
+      			-ms-user-select: none;
             /*This removes the border around the canvas that Phaser adds, making the game actually take up all the available space*/
         }
 
@@ -66,9 +72,9 @@
 
 <body>
 
-    <script type="text/javascript" src="game.min.js"></script>
-    <script src="js/analytics_ubg_v1_4.js"></script>
-    <script src="js/ubg235_client_v1_1.js"></script>
+<script type="text/javascript" src="game.min.js"></script>
+<script src="js/analytics_ubg_v1_4.js"></script>
+<script src="js/ubg235_client_v1_1.js"></script>
 
 </body>
 
